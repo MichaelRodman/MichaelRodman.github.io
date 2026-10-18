@@ -150,3 +150,86 @@ Overall, this enhancement strengthened my understanding of graph algorithms, dat
 
 - [View the Original CS 300 Course Planner Artifact](https://github.com/MichaelRodman/CS300_ProjectTwo/tree/main)
 - [View the Enhanced CS 300 Course Planner Artifact](https://github.com/MichaelRodman/CS300_ProjectTwo/tree/cs499-enhancement2)
+
+
+
+## Grazioso Salvare Rescue Animal Dashboard — Databases
+
+### Artifact Description
+
+The Grazioso Salvare Rescue Animal Dashboard is a Python-based application that I originally developed in CS 340: Client/Server Development during June 2026. The project connects to a MongoDB database containing animal shelter records and uses a reusable Python CRUD module to retrieve and manage data.
+
+The dashboard uses Jupyter Dash to provide an interactive interface where users can filter animal records based on different rescue profiles, including water rescue, mountain or wilderness rescue, and disaster or individual tracking. The results are displayed through a data table, breed visualization, and geolocation map.
+
+### Why I Selected This Artifact
+
+I selected the Grazioso Salvare dashboard because it demonstrates how database operations can support a practical application. The original project allowed users to retrieve and filter records, but there were opportunities to improve how the database handled security, performance, validation, and data processing.
+
+Enhancing this artifact gave me an opportunity to apply more advanced MongoDB techniques and better understand how database design affects the reliability and maintainability of an application.
+
+### Enhancement
+
+For the Databases enhancement, I focused on improving the security, efficiency, reliability, and maintainability of the database implementation.
+
+The enhancement included:
+
+- Removing hardcoded MongoDB credentials and replacing them with environment-based configuration
+- Adding a `.gitignore` file to prevent local credential files from being committed
+- Creating a compound MongoDB index for fields commonly used in rescue-animal queries
+- Implementing MongoDB aggregation pipelines to summarize breed information
+- Adding input validation to reject invalid database queries
+- Preventing unrestricted update and delete operations caused by empty queries
+- Improving error handling to avoid exposing unnecessary database information
+- Creating automated unit and regression tests for database functionality
+
+These improvements strengthened the database layer while preserving the dashboard's existing filtering and visualization capabilities.
+
+### Skills Demonstrated
+
+This enhancement demonstrates my ability to evaluate an existing database implementation and identify opportunities for improving performance, security, and reliability.
+
+One important improvement was adding a compound index using the animal type, breed, sex, and age fields. These fields are frequently used together when filtering rescue candidates, so the index provides MongoDB with a more efficient way to locate matching records.
+
+Another improvement involved moving breed-summary processing into MongoDB. The enhanced application uses an aggregation pipeline with `$match`, `$group`, `$sort`, and `$limit` stages. This allows the database to perform filtering and summarization before returning the results to the application, reducing the need for additional processing in Pandas.
+
+The enhancement also demonstrates secure database development practices. Replacing hardcoded credentials with environment variables helped protect sensitive information, while query validation and restrictions on update and delete operations reduced the risk of unintended database changes.
+
+Finally, I created a Python unittest suite using mocked MongoDB objects. The suite contains 12 tests covering the new enhancements and existing CRUD operations. All 12 tests passed during development.
+
+### Course Outcomes
+
+This enhancement most directly demonstrates Course Outcome Four and Course Outcome Five.
+
+**Course Outcome Four:** Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals.
+
+The enhancement supports this outcome through MongoDB indexing, aggregation pipelines, reusable CRUD operations, environment-based configuration, and automated testing. These improvements make the database implementation more efficient, maintainable, and reliable while continuing to support the needs of Grazioso Salvare.
+
+**Course Outcome Five:** Develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources.
+
+The enhancement supports this outcome by removing hardcoded database credentials, protecting local configuration files, validating database inputs, preventing unrestricted update and delete operations, and improving error handling. These changes demonstrate my ability to identify potential vulnerabilities and implement safeguards to protect data and resources.
+
+The artifact also partially supports **Course Outcome Two** through the documentation, code comments, testing, and written narrative used to communicate technical decisions and explain the improvements.
+
+Course Outcomes One and Three are demonstrated more directly through other components of the capstone portfolio.
+
+### Reflection
+
+Revisiting the Grazioso Salvare dashboard helped me understand that database development involves much more than connecting an application to stored data. When I originally completed the project, I focused primarily on making sure the database connection worked and the dashboard displayed the correct information.
+
+During CS 499, I approached the project differently. I looked more closely at how database queries were processed, how credentials were managed, and how the application responded to invalid input.
+
+One of the most useful improvements was implementing MongoDB aggregation. Previously, the dashboard relied on Pandas to summarize breed information after retrieving records. Moving that processing into MongoDB helped me better understand how database operations can reduce unnecessary work in the application.
+
+Security was another important lesson. Replacing hardcoded credentials and adding restrictions to database operations showed me how seemingly small implementation decisions can create unnecessary risks.
+
+I also applied feedback from earlier capstone milestones by placing more emphasis on automated testing. Developing 12 tests with mocked database objects helped me verify the new features without requiring a live MongoDB connection. It also gave me greater confidence that the enhancement preserved the original CRUD functionality.
+
+One challenge involved working through differences between Python installations on my computer. After identifying the correct Python environment and installing the required dependencies, I was able to run the tests successfully.
+
+Overall, this enhancement strengthened my understanding of database design, MongoDB query optimization, security practices, automated testing, and maintainable software development. It also reinforced the importance of evaluating how an application works internally instead of focusing only on whether the visible features function correctly.
+
+### Artifact Links
+
+- [View the Original Grazioso Salvare Artifact](https://github.com/MichaelRodman/CS499-Grazioso-Salvare/tree/main/original)
+- [View the Enhanced Grazioso Salvare Artifact](https://github.com/MichaelRodman/CS499-Grazioso-Salvare/tree/main/enhanced)
+- [View the Database Enhancement Narrative](https://github.com/MichaelRodman/CS499-Grazioso-Salvare/blob/main/enhanced/CS499_Module5_Milestone4_Michael_Rodman.docx)
