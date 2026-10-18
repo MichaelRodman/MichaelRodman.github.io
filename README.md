@@ -154,6 +154,7 @@ Professor Sanford's feedback confirmed that the enhancement meaningfully improve
 
 - [View the Original Travlr Getaways Artifact](https://github.com/MichaelRodman/cs465-fullstack/tree/0750610e6c7fb68c13c68283ccc33b6515ca5dfa)
 - [View the Enhanced Travlr Getaways Artifact](https://github.com/MichaelRodman/cs465-fullstack/tree/cs499-enhancement1)
+- [View the Software Design and Engineering Narrative](CS499_Module3_Milestone2_Michael_Rodman.docx)
 
 ## CS 300 Course Planner — Algorithms and Data Structures
 
@@ -225,7 +226,7 @@ Overall, this enhancement strengthened my understanding of graph algorithms, dat
 
 - [View the Original CS 300 Course Planner Artifact](https://github.com/MichaelRodman/CS300_ProjectTwo/tree/main)
 - [View the Enhanced CS 300 Course Planner Artifact](https://github.com/MichaelRodman/CS300_ProjectTwo/tree/cs499-enhancement2)
-
+- [View the Algorithms and Data Structures Narrative](CS499_Module4_Milestone3_Michael_Rodman.docx)
 
 
 ## Grazioso Salvare Rescue Animal Dashboard — Databases
