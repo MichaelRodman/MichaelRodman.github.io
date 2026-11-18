@@ -255,6 +255,15 @@ img {
   color: var(--accent-ink);
 }
 
+/* Contact details */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+.contact-list li { margin-bottom: 0.5rem; }
+.contact-list li::marker { content: none; }
+
 /* Sections */
 .section {
   padding: 3.5rem 0;
